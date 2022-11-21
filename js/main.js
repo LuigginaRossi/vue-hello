@@ -8,10 +8,11 @@ createApp({
     data(){     
         return{  
             user: {
-                firstName: "Luca",
-                lastName: "Pace",
+                firstName: "Salvador",
+                lastName: "Dali",
             },
-            profilePhoto: "img/user.jpg",
+            profilePhoto: "img/salvador-dali.jpg",
+            imgClass: "w-50",
         }
     }
 }).mount("#app")

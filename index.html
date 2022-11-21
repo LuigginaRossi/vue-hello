@@ -11,24 +11,23 @@
 </head>
 <body class="container text-center">
 
-    <div id="app">
-
-        
-        <!-- collegamento BIDIREZIONALE insserisco io da js e se utente inserisce qualcosa cambia il valore-->
-        <!-- il V-MODEL: usato su tutti elementi del form=>es: qui si occupa del valore degli input: -->
+    <form id="app" class="py-5">
         
             <h3>Inserisci il tuo nome:</h3>
-        <!-- .lazy => permette di non scrivere in tempoo reale ma di aspettare
-            che io finisca la modifica e poi aggiornare -->
-            <input type="text" v-model.lazy=" user.firstName ">
+
+            <div class="input-group mb-3">
+                
+                <input type="text" class="form-control my-3 me-3 w-25"  v-model.lazy=" user.firstName " placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                
+                <input type="text" class="form-control my-3 me-3 w-25"  v-model.lazy=" user.lastName " placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
             
-            <input type="text" v-model=" user.lastName">
-            
-            <h1>Benvenuto {{ user.firstName }} {{ user.lastName }} !</h1>
-            <img :src="profilePhoto" :alt="'img profilo' + cognome + nome ">
+            <h1 class="py-5">Benvenuto {{ user.firstName }} {{ user.lastName }} !</h1>
+            <img :class="imgClass" :src="profilePhoto" :alt="'img profilo' + cognome + nome ">
 
      
-    </div>
+    </form>
 
  
     <script src="js/main.js"></script>
